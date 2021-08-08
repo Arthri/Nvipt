@@ -1,4 +1,4 @@
-namespace Nvipt.Core
+﻿namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.
@@ -11,9 +11,19 @@ namespace Nvipt.Core
         public static readonly int InventorySize = 59;
 
         /// <summary>
+        /// Represents the amount of armor slots.
+        /// </summary>
+        public static readonly int ArmorSize = 3;
+
+        /// <summary>
+        /// Represents the amount of accessory slots.
+        /// </summary>
+        public static readonly int AccessorySize = 7;
+
+        /// <summary>
         /// Represents the size of <see cref="Equipment"/>.
         /// </summary>
-        public static readonly int EquipmentSize = 20;
+        public static readonly int EquipmentSize = ArmorSize + AccessorySize + 10;
 
         /// <summary>
         /// Represents the size of <see cref="Dye"/>.
