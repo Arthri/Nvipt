@@ -1,3 +1,5 @@
+﻿using System;
+
 namespace Nvipt.Core
 {
     /// <summary>
@@ -76,53 +78,215 @@ namespace Nvipt.Core
           + VoidVaultSize;
 
         /// <summary>
+        /// The backing field for <see cref="Backpack"/>.
+        /// </summary>
+        private BasicItem[] _backpack;
+
+        /// <summary>
         /// Represents the main inventory including the hot bar, coins, ammo and mouse item.
         /// </summary>
-        public BasicItem[] Backpack { get; }
+        public BasicItem[] Backpack
+        {
+            get => _backpack;
+
+            set
+            {
+                if (value.Length != BackpackSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _backpack = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="Equipment"/>.
+        /// </summary>
+        private BasicItem[] _equipment;
 
         /// <summary>
         /// Represents the armor slots including the armor, accessories, and vanity.
         /// </summary>
-        public BasicItem[] Equipment { get; }
+        public BasicItem[] Equipment
+        {
+            get => _equipment;
+
+            set
+            {
+                if (value.Length != EquipmentSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _equipment = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="Dyes"/>.
+        /// </summary>
+        private BasicItem[] _dyes;
 
         /// <summary>
         /// Represents the dye slots.
         /// </summary>
-        public BasicItem[] Dyes { get; }
+        public BasicItem[] Dyes
+        {
+            get => _dyes;
+
+            set
+            {
+                if (value.Length != DyesSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _dyes = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="MiscEquips"/>.
+        /// </summary>
+        private BasicItem[] _miscEquips;
 
         /// <summary>
         /// Represents the miscellaneous equip slots, including the pet, light pet, mount, minecart, and hook.
         /// </summary>
-        public BasicItem[] MiscEquips { get; }
+        public BasicItem[] MiscEquips
+        {
+            get => _miscEquips;
+
+            set
+            {
+                if (value.Length != MiscEquipsSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _miscEquips = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="MiscDyes"/>.
+        /// </summary>
+        private BasicItem[] _miscDyes;
 
         /// <summary>
         /// Represents the miscellaneous dye slots.
         /// </summary>
-        public BasicItem[] MiscDyes { get; }
+        public BasicItem[] MiscDyes
+        {
+            get => _miscDyes;
+
+            set
+            {
+                if (value.Length != MiscDyesSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _miscDyes = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="PiggyBank"/>.
+        /// </summary>
+        private BasicItem[] _piggyBank;
 
         /// <summary>
         /// Represents the piggy bank slots.
         /// </summary>
-        public BasicItem[] PiggyBank { get; }
+        public BasicItem[] PiggyBank
+        {
+            get => _piggyBank;
+
+            set
+            {
+                if (value.Length != PiggyBankSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _piggyBank = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="Safe"/>.
+        /// </summary>
+        private BasicItem[] _safe;
 
         /// <summary>
         /// Represents the safe(storage) slots.
         /// </summary>
-        public BasicItem[] Safe { get; }
+        public BasicItem[] Safe
+        {
+            get => _safe;
+
+            set
+            {
+                if (value.Length != SafeSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _safe = value;
+            }
+        }
 
         /// <summary>
         /// Represents the trash item.
         /// </summary>
-        public BasicItem TrashItem { get; }
+        public BasicItem TrashItem { get; set; }
+
+        /// <summary>
+        /// The backing field for <see cref="DefendersForge"/>.
+        /// </summary>
+        private BasicItem[] _defendersForge;
 
         /// <summary>
         /// Represents the defender's forge slots.
         /// </summary>
-        public BasicItem[] DefendersForge { get; }
+        public BasicItem[] DefendersForge
+        {
+            get => _defendersForge;
+
+            set
+            {
+                if (value.Length != DefendersForgeSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _defendersForge = value;
+            }
+        }
+
+        /// <summary>
+        /// The backing field for <see cref="VoidVault"/>.
+        /// </summary>
+        private BasicItem[] _voidVault;
 
         /// <summary>
         /// Represents the void vault slots.
         /// </summary>
-        public BasicItem[] VoidVault { get; }
+        public BasicItem[] VoidVault
+        {
+            get => _voidVault;
+
+            set
+            {
+                if (value.Length != VoidVaultSize)
+                {
+                    throw new ArgumentException(nameof(value) + " is incorrectly sized.", nameof(value));
+                }
+
+                _voidVault = value;
+            }
+        }
     }
 }
