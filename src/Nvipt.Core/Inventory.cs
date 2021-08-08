@@ -11,9 +11,9 @@ namespace Nvipt.Core
         public static readonly int InventorySize = 59;
 
         /// <summary>
-        /// Represents the size of <see cref="Armor"/>.
+        /// Represents the size of <see cref="Equipment"/>.
         /// </summary>
-        public static readonly int ArmorSize = 20;
+        public static readonly int EquipmentSize = 20;
 
         /// <summary>
         /// Represents the size of <see cref="Dye"/>.
@@ -58,7 +58,7 @@ namespace Nvipt.Core
         /// <summary>
         /// Represents the armor slots including the armor, accessories, and vanity.
         /// </summary>
-        public BasicItem[] Armor { get; }
+        public BasicItem[] Equipment { get; }
 
         /// <summary>
         /// Represents the dye slots.
