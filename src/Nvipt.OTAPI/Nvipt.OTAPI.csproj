@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Extensions\BasicItemExtensions.cs" />
     <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\NviptColorExtensions.cs" />
+    <Compile Include="Extensions\XNAColorExtensions.cs" />
     <Compile Include="IInventoryApplier.cs" />
     <Compile Include="IInventoryExtractor.cs" />
     <Compile Include="InventoryApplier.cs" />
