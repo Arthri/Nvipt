@@ -1,4 +1,4 @@
-namespace Nvipt.Core
+﻿namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a unit of player data.
@@ -24,5 +24,10 @@ namespace Nvipt.Core
         /// Represents this Nvpt's inventory.
         /// </summary>
         public Inventory Inventory { get; set; }
+
+        /// <summary>
+        /// Represent's the player's aesthetic attributes.
+        /// </summary>
+        public PlayerStyle Style { get; }
     }
 }
