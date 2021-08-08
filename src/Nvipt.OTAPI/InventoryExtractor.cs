@@ -12,32 +12,18 @@ namespace Nvipt.OTAPI
 
         public virtual Inventory GetInventory(Player player)
         {
-            var items = new BasicItem[Inventory.InventorySize];
-
-            var i = 0;
-
-            Copy(player.inventory);
-            Copy(player.armor);
-            Copy(player.dye);
-            Copy(player.miscEquips);
-            Copy(player.miscDyes);
-            Copy(player.bank.item);
-            Copy(player.bank2.item);
-            items[i++] = player.trashItem.ToBasicItem();
-            Copy(player.bank3.item);
-            Copy(player.bank4.item);
-
-            void Copy(Item[] tItems)
+            return new Inventory(
+                player.inventory.ToBasicItem(),
+                player.armor.ToBasicItem(),
+                player.dye.ToBasicItem(),
+                player.miscEquips.ToBasicItem(),
+                player.miscDyes.ToBasicItem(),
+                player.bank.item.ToBasicItem(),
+                player.bank2.item.ToBasicItem(),
+                player.bank3.item.ToBasicItem(),
+                player.bank4.item.ToBasicItem())
             {
-                foreach (var item in tItems)
-                {
-                    items[i++] = item.ToBasicItem();
-                }
-            }
-
-            return new Inventory
-            {
-                Items = items
+                TrashItem = player.trashItem.ToBasicItem()
             };
         }
     }
