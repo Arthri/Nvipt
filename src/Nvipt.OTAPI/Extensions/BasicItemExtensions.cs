@@ -1,7 +1,10 @@
-using Terraria;
+﻿using Terraria;
 
 namespace Nvipt.OTAPI.Extensions
 {
+    /// <summary>
+    /// Provides helper methods for <see cref="Nvipt.BasicItem"/>.
+    /// </summary>
     public static class BasicItemExtensions
     {
         /// <summary>
