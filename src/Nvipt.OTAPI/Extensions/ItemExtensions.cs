@@ -9,12 +9,12 @@ namespace Nvipt.OTAPI.Extensions
     public static class ItemExtensions
     {
         /// <summary>
-        /// Determines whether two specified instances of <see cref="Item"/> and <see cref="BasicItem"/> are equal
+        /// Determines whether two specified instances of <see cref="Item"/> and <see cref="BasicItem"/> are equal.
         /// </summary>
-        /// <param name="item1">The first item to compare</param>
-        /// <param name="item2">The second item to compare</param>
-        /// <returns><see langword="true"/> if <paramref name="item1"/> and <paramref name="item2"/> represent the same item, otherwise <see langword="false"/></returns>
-        /// <remarks>Returns true for two different items with the same ID, stack and prefix</remarks>
+        /// <param name="item1">The first item to compare.</param>
+        /// <param name="item2">The second item to compare.</param>
+        /// <returns><see langword="true"/> if <paramref name="item1"/> and <paramref name="item2"/> represent the same item, otherwise <see langword="false"/>.</returns>
+        /// <remarks>Returns true for two different items with the same ID, stack and prefix.</remarks>
         public static bool IsEqual(this Item item1, BasicItem item2)
         {
             if (item1 is null)
@@ -30,10 +30,10 @@ namespace Nvipt.OTAPI.Extensions
         }
 
         /// <summary>
-        /// Creates a basic item based of the current item
+        /// Creates a basic item based of the current item.
         /// </summary>
-        /// <param name="item">The current item</param>
-        /// <returns>A basic item based off the current item</returns>
+        /// <param name="item">The current item.</param>
+        /// <returns>A basic item based off the current item.</returns>
         public static BasicItem ToBasicItem(this Item item)
         {
             return new BasicItem
