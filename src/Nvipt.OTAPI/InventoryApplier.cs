@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Nvipt.OTAPI.Extensions;
 using Nvipt.Core;
@@ -26,7 +26,7 @@ namespace Nvipt.OTAPI
 
             ApplySlots(player.inventory, inventory.Backpack);
             ApplySlots(player.armor, inventory.Equipment);
-            ApplySlots(player.dye, inventory.Dye);
+            ApplySlots(player.dye, inventory.Dyes);
             ApplySlots(player.miscEquips, inventory.MiscEquips);
             ApplySlots(player.miscDyes, inventory.MiscDyes);
             ApplySlots(player.bank.item, inventory.PiggyBank);

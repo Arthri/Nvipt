@@ -1,4 +1,4 @@
-﻿namespace Nvipt.Core
+namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.
@@ -26,9 +26,9 @@
         public static readonly int EquipmentSize = ArmorSize + AccessorySize + 10;
 
         /// <summary>
-        /// Represents the size of <see cref="Dye"/>.
+        /// Represents the size of <see cref="Dyes"/>.
         /// </summary>
-        public static readonly int DyeSize = 10;
+        public static readonly int DyesSize = 10;
 
         /// <summary>
         /// Represents the size of <see cref="MiscEquips"/>.
@@ -66,7 +66,7 @@
         public static readonly int InventorySize = 
             BackpackSize
           + EquipmentSize
-          + DyeSize
+          + DyesSize
           + MiscEquipsSize
           + MiscDyesSize
           + PiggyBankSize
@@ -88,7 +88,7 @@
         /// <summary>
         /// Represents the dye slots.
         /// </summary>
-        public BasicItem[] Dye { get; }
+        public BasicItem[] Dyes { get; }
 
         /// <summary>
         /// Represents the miscellaneous equip slots, including the pet, light pet, mount, minecart, and hook.
