@@ -5,9 +5,9 @@ using Nvipt.Core;
 
 namespace Nvipt.OTAPI
 {
-    public class InventoryApplier : IInventoryApplier
+    public class NvptApplier : INvptApplier
     {
-        void IInventoryApplier.Apply(Inventory inventory, Player player)
+        void INvptApplier.Apply(Inventory inventory, Player player)
         {
             Apply(inventory, player, true);
         }

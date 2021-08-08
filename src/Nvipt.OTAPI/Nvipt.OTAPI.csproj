@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,10 +43,10 @@
     <Compile Include="Extensions\ItemExtensions.cs" />
     <Compile Include="Extensions\NviptColorExtensions.cs" />
     <Compile Include="Extensions\XNAColorExtensions.cs" />
-    <Compile Include="IInventoryApplier.cs" />
-    <Compile Include="IInventoryExtractor.cs" />
-    <Compile Include="InventoryApplier.cs" />
-    <Compile Include="InventoryExtractor.cs" />
+    <Compile Include="INvptApplier.cs" />
+    <Compile Include="INvptExtractor.cs" />
+    <Compile Include="NvptApplier.cs" />
+    <Compile Include="NvptExtractor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

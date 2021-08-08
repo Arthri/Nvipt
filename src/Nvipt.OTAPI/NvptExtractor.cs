@@ -4,9 +4,9 @@ using Terraria;
 
 namespace Nvipt.OTAPI
 {
-    public class InventoryExtractor : IInventoryExtractor
+    public class NvptExtractor : INvptExtractor
     {
-        public InventoryExtractor()
+        public NvptExtractor()
         {
         }
 

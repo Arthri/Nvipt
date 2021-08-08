@@ -3,7 +3,7 @@ using Terraria;
 
 namespace Nvipt.OTAPI
 {
-    public interface IInventoryExtractor
+    public interface INvptExtractor
     {
         Inventory GetInventory(Player player);
     }

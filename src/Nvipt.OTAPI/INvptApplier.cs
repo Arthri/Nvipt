@@ -3,7 +3,7 @@ using Terraria;
 
 namespace Nvipt.OTAPI
 {
-    public interface IInventoryApplier
+    public interface INvptApplier
     {
         void Apply(Inventory inventory, Player player);
     }
