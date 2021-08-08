@@ -1,4 +1,4 @@
-namespace Nvipt.Core
+﻿namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.
@@ -59,6 +59,21 @@ namespace Nvipt.Core
         /// Represents the size of <see cref="VoidVault"/>.
         /// </summary>
         public static readonly int VoidVaultSize = 40;
+
+        /// <summary>
+        /// Represents the total size of an inventory.
+        /// </summary>
+        public static readonly int InventorySize = 
+            MainInventorySize
+          + EquipmentSize
+          + DyeSize
+          + MiscEquipsSize
+          + MiscDyesSize
+          + PiggyBankSize
+          + SafeSize
+          + 1
+          + DefendersForgeSize
+          + VoidVaultSize;
 
         /// <summary>
         /// Represents the main inventory including the hot bar, coins, ammo and mouse item.
