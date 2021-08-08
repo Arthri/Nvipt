@@ -4,12 +4,16 @@ using Terraria;
 
 namespace Nvipt.OTAPI
 {
+    /// <summary>
+    /// Default implementation of <see cref="NvptExtractor"/>
+    /// </summary>
     public class NvptExtractor : INvptExtractor
     {
         public NvptExtractor()
         {
         }
 
+        /// <inheritdoc />
         public virtual Inventory GetInventory(Player player)
         {
             return new Inventory(

@@ -5,13 +5,19 @@ using Nvipt.Core;
 
 namespace Nvipt.OTAPI
 {
+    /// <summary>
+    /// Provides an implementation of <see cref="INvptApplier"/> through SSC.
+    /// </summary>
     public class NvptApplier : INvptApplier
     {
+        /// <inheritdoc />
         void INvptApplier.Apply(Inventory inventory, Player player)
         {
             Apply(inventory, player, true);
         }
 
+        /// <inheritdoc cref="INvptApplier.Apply(Inventory, Player)"/>
+        /// <param name="toggleSSC">If true, then SSC will be turned on if it isn't already. SSC will be turned off after the operation.</param>
         public void Apply(Inventory inventory, Player player, bool toggleSSC = true)
         {
             var wasSSCEnabled = Main.ServerSideCharacter;
