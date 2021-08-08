@@ -24,7 +24,7 @@ namespace Nvipt.OTAPI
 
             var i = 0;
 
-            ApplySlots(player.inventory, inventory.MainInventory);
+            ApplySlots(player.inventory, inventory.Backpack);
             ApplySlots(player.armor, inventory.Equipment);
             ApplySlots(player.dye, inventory.Dye);
             ApplySlots(player.miscEquips, inventory.MiscEquips);

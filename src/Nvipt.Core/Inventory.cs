@@ -6,9 +6,9 @@
     public class Inventory
     {
         /// <summary>
-        /// Represents the size of <see cref="MainInventory"/>.
+        /// Represents the size of <see cref="Backpack"/>.
         /// </summary>
-        public static readonly int MainInventorySize = 59;
+        public static readonly int BackpackSize = 59;
 
         /// <summary>
         /// Represents the amount of armor slots.
@@ -64,7 +64,7 @@
         /// Represents the total size of an inventory.
         /// </summary>
         public static readonly int InventorySize = 
-            MainInventorySize
+            BackpackSize
           + EquipmentSize
           + DyeSize
           + MiscEquipsSize
@@ -78,7 +78,7 @@
         /// <summary>
         /// Represents the main inventory including the hot bar, coins, ammo and mouse item.
         /// </summary>
-        public BasicItem[] MainInventory { get; }
+        public BasicItem[] Backpack { get; }
 
         /// <summary>
         /// Represents the armor slots including the armor, accessories, and vanity.
