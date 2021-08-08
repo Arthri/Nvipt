@@ -288,5 +288,18 @@ namespace Nvipt.Core
                 _voidVault = value;
             }
         }
+
+        public Inventory()
+        {
+            _backpack = new BasicItem[BackpackSize];
+            _equipment = new BasicItem[EquipmentSize];
+            _dyes = new BasicItem[DyesSize];
+            _miscEquips = new BasicItem[MiscEquipsSize];
+            _miscDyes = new BasicItem[MiscDyesSize];
+            _piggyBank = new BasicItem[PiggyBankSize];
+            _safe = new BasicItem[SafeSize];
+            _defendersForge = new BasicItem[DefendersForgeSize];
+            _voidVault = new BasicItem[VoidVaultSize];
+        }
     }
 }
