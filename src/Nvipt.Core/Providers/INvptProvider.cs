@@ -1,4 +1,4 @@
-﻿namespace Nvipt.Providers
+namespace Nvipt.Core.Providers
 {
     /// <summary>
     /// Defines mechanisms for getting or updating Nvpts.

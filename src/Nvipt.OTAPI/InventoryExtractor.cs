@@ -1,4 +1,5 @@
-﻿using Nvipt.OTAPI.Extensions;
+﻿using Nvipt.Core;
+using Nvipt.OTAPI.Extensions;
 using Terraria;
 
 namespace Nvipt.OTAPI

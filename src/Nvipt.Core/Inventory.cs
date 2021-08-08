@@ -1,4 +1,4 @@
-﻿namespace Nvipt
+namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.

@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Nvipt
+namespace Nvipt.Core
 {
     /// <summary>
     /// Represents an barebones item.

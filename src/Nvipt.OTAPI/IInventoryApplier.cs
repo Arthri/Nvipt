@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Nvipt.Core;
+using Terraria;
 
 namespace Nvipt.OTAPI
 {
