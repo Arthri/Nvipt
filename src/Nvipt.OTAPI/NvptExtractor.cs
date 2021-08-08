@@ -9,10 +9,6 @@ namespace Nvipt.OTAPI
     /// </summary>
     public class NvptExtractor : INvptExtractor
     {
-        public NvptExtractor()
-        {
-        }
-
         /// <inheritdoc />
         public virtual Inventory GetInventory(Player player)
         {
