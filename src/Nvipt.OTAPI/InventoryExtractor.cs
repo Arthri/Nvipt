@@ -6,15 +6,13 @@ namespace Nvipt.OTAPI
 {
     public class InventoryExtractor : IInventoryExtractor
     {
-        private static readonly int _slotsCount = 260;
-
         public InventoryExtractor()
         {
         }
 
         public virtual Inventory GetInventory(Player player)
         {
-            var items = new BasicItem[_slotsCount];
+            var items = new BasicItem[Inventory.InventorySize];
 
             var i = 0;
 
