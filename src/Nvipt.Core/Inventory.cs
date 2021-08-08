@@ -301,5 +301,72 @@ namespace Nvipt.Core
             _defendersForge = new BasicItem[DefendersForgeSize];
             _voidVault = new BasicItem[VoidVaultSize];
         }
+
+        public Inventory(
+            BasicItem[] backpack,
+            BasicItem[] equipment,
+            BasicItem[] dyes,
+            BasicItem[] miscEquips,
+            BasicItem[] miscDyes,
+            BasicItem[] piggyBank,
+            BasicItem[] safe,
+            BasicItem[] defendersForge,
+            BasicItem[] voidVault)
+        {
+            if (backpack.Length != BackpackSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(backpack));
+            }
+
+            if (equipment.Length != EquipmentSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(equipment));
+            }
+
+            if (dyes.Length != DyesSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(dyes));
+            }
+
+            if (miscEquips.Length != MiscEquipsSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(miscEquips));
+            }
+
+            if (miscDyes.Length != MiscDyesSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(miscDyes));
+            }
+
+            if (piggyBank.Length != PiggyBankSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(piggyBank));
+            }
+
+            if (safe.Length != SafeSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(safe));
+            }
+
+            if (defendersForge.Length != DefendersForgeSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(defendersForge));
+            }
+
+            if (voidVault.Length != VoidVaultSize)
+            {
+                throw new ArgumentException("Array is incorrectly sized.", nameof(voidVault));
+            }
+
+            _backpack = backpack;
+            _equipment = equipment;
+            _dyes = dyes;
+            _miscEquips = miscEquips;
+            _miscDyes = miscDyes;
+            _piggyBank = piggyBank;
+            _safe = safe;
+            _defendersForge = defendersForge;
+            _voidVault = voidVault;
+        }
     }
 }
