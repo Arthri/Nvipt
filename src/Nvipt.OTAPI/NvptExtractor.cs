@@ -10,7 +10,7 @@ namespace Nvipt.OTAPI
     public class NvptExtractor : INvptExtractor
     {
         /// <inheritdoc />
-        public virtual Inventory GetInventory(Player player)
+        public Inventory GetInventory(Player player)
         {
             return new Inventory(
                 player.inventory.ToBasicItem(),
