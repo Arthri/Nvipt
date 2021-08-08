@@ -1,6 +1,6 @@
 ﻿using Terraria;
 
-namespace Nvipt.Helpers
+namespace Nvipt.OTAPI
 {
     public interface IItemConverter
     {

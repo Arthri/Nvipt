@@ -1,10 +1,11 @@
 ﻿using Terraria;
-using TShockAPI;
 
-namespace Nvipt.Helpers
+namespace Nvipt.OTAPI
 {
     public class InventoryExtractor : IInventoryExtractor
     {
+        private static readonly int _slotsCount = 260;
+
         public IItemConverter ItemConverter { get; }
 
         public InventoryExtractor()
@@ -19,7 +20,7 @@ namespace Nvipt.Helpers
 
         public virtual Inventory GetInventory(Player player)
         {
-            var items = new BasicItem[NetItem.MaxInventory];
+            var items = new BasicItem[_slotsCount];
 
             var i = 0;
 

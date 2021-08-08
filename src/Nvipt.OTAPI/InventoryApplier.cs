@@ -1,6 +1,8 @@
 ﻿using Terraria;
+using Terraria.ID;
+using Nvipt.OTAPI.Extensions;
 
-namespace Nvipt.Helpers
+namespace Nvipt.OTAPI
 {
     public class InventoryApplier : IInventoryApplier
     {
@@ -16,7 +18,7 @@ namespace Nvipt.Helpers
             if (!wasSSCEnabled && toggleSSC)
             {
                 Main.ServerSideCharacter = true;
-                NetMessage.SendData((int)PacketTypes.WorldInfo, player.whoAmI);
+                NetMessage.SendData(MessageID.WorldData, player.whoAmI);
             }
 
             var i = 0;
@@ -35,7 +37,7 @@ namespace Nvipt.Helpers
             if (!wasSSCEnabled && toggleSSC)
             {
                 Main.ServerSideCharacter = false;
-                NetMessage.SendData((int)PacketTypes.WorldInfo, player.whoAmI);
+                NetMessage.SendData(MessageID.WorldData, player.whoAmI);
             }
 
             void ApplySlots(Item[] items)
@@ -54,13 +56,13 @@ namespace Nvipt.Helpers
 
             bool ApplySlot(ref Item oldItem, BasicItem newItem)
             {
-                if (oldItem != newItem)
+                if (oldItem.IsEqual(newItem))
                 {
                     oldItem.SetDefaults(newItem.ID);
                     oldItem.stack = newItem.Stack;
                     oldItem.prefix = newItem.Prefix;
                     NetMessage.SendData(
-                        (int)PacketTypes.PlayerSlot,
+                        MessageID.SyncEquipment,
                         number: player.whoAmI,
                         number2: i,
                         number3: newItem.Prefix);
