@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d04e4b55-e049-4427-8981-9757d22b8210</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Nvipt.OTAPI</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\BasicItemExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ItemExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\NviptColorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\XNAColorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)INvptApplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)INvptExtractor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NvptApplier.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NvptExtractor.cs" />
+  </ItemGroup>
+</Project>
