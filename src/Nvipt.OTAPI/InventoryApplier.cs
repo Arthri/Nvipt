@@ -24,16 +24,16 @@ namespace Nvipt.OTAPI
 
             var i = 0;
 
-            ApplySlots(player.inventory);
-            ApplySlots(player.armor);
-            ApplySlots(player.dye);
-            ApplySlots(player.miscEquips);
-            ApplySlots(player.miscDyes);
-            ApplySlots(player.bank.item);
-            ApplySlots(player.bank2.item);
-            ApplySlot(ref player.trashItem, inventory.Items[i++]);
-            ApplySlots(player.bank3.item);
-            ApplySlots(player.bank4.item);
+            ApplySlots(player.inventory, inventory.MainInventory);
+            ApplySlots(player.armor, inventory.Equipment);
+            ApplySlots(player.dye, inventory.Dye);
+            ApplySlots(player.miscEquips, inventory.MiscEquips);
+            ApplySlots(player.miscDyes, inventory.MiscDyes);
+            ApplySlots(player.bank.item, inventory.PiggyBank);
+            ApplySlots(player.bank2.item, inventory.Safe);
+            ApplySlot(ref player.trashItem, inventory.TrashItem);
+            ApplySlots(player.bank3.item, inventory.DefendersForge);
+            ApplySlots(player.bank4.item, inventory.VoidVault);
 
             if (!wasSSCEnabled && toggleSSC)
             {
@@ -41,7 +41,7 @@ namespace Nvipt.OTAPI
                 NetMessage.SendData(MessageID.WorldData, player.whoAmI);
             }
 
-            void ApplySlots(Item[] items)
+            void ApplySlots(Item[] items, BasicItem[] newItems)
             {
                 var length = i + items.Length;
                 for (var j = 0; i < length; i++, j++)
@@ -51,7 +51,7 @@ namespace Nvipt.OTAPI
                         continue;
                     }
 
-                    ApplySlot(ref items[j], inventory.Items[i]);
+                    ApplySlot(ref items[j], newItems[i]);
                 }
             }
 
