@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using Nvipt.OTAPI.Extensions;
+using Terraria;
 
 namespace Nvipt.OTAPI
 {
@@ -6,16 +7,8 @@ namespace Nvipt.OTAPI
     {
         private static readonly int _slotsCount = 260;
 
-        public IItemConverter ItemConverter { get; }
-
         public InventoryExtractor()
         {
-            ItemConverter = new ItemConverter();
-        }
-
-        public InventoryExtractor(IItemConverter itemConverter)
-        {
-            ItemConverter = itemConverter;
         }
 
         public virtual Inventory GetInventory(Player player)
@@ -31,7 +24,7 @@ namespace Nvipt.OTAPI
             Copy(player.miscDyes);
             Copy(player.bank.item);
             Copy(player.bank2.item);
-            items[i++] = ItemConverter.ToBasicItem(player.trashItem);
+            items[i++] = player.trashItem.ToBasicItem();
             Copy(player.bank3.item);
             Copy(player.bank4.item);
 
@@ -39,7 +32,7 @@ namespace Nvipt.OTAPI
             {
                 foreach (var item in tItems)
                 {
-                    items[i++] = ItemConverter.ToBasicItem(item);
+                    items[i++] = item.ToBasicItem();
                 }
             }
 

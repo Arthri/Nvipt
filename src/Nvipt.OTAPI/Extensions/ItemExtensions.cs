@@ -27,5 +27,20 @@ namespace Nvipt.OTAPI.Extensions
                     && item1.prefix == item2.Prefix;
             }
         }
+
+        /// <summary>
+        /// Creates a basic item based of the current item
+        /// </summary>
+        /// <param name="item">The current item</param>
+        /// <returns>A basic item based off the current item</returns>
+        public static BasicItem ToBasicItem(this Item item)
+        {
+            return new BasicItem
+            {
+                ID = (short)item.netID,
+                Stack = (short)item.stack,
+                Prefix = item.prefix
+            };
+        }
     }
 }
