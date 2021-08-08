@@ -43,5 +43,22 @@ namespace Nvipt.OTAPI.Extensions
                 Prefix = item.prefix
             };
         }
+
+        /// <summary>
+        /// Converts an array of <see cref="Terraria.Item"/> into an array of <see cref="Nvipt.Core.BasicItem"/>.
+        /// </summary>
+        /// <param name="items">The array of <see cref="Terraria.Item"/> to convert.</param>
+        /// <returns>An array of <see cref="Nvipt.Core.BasicItem"/>.</returns>
+        public static BasicItem[] ToBasicItem(this Item[] items)
+        {
+            var basicItems = new BasicItem[items.Length];
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                basicItems[i] = items[i].ToBasicItem();
+            }
+
+            return basicItems;
+        }
     }
 }
