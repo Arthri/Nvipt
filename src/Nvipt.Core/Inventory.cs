@@ -1,4 +1,4 @@
-﻿namespace Nvipt.Core
+namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.
@@ -8,7 +8,7 @@
         /// <summary>
         /// Represents the size of <see cref="MainInventory"/>.
         /// </summary>
-        public static readonly int InventorySize = 59;
+        public static readonly int MainInventorySize = 59;
 
         /// <summary>
         /// Represents the amount of armor slots.
