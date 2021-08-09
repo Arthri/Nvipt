@@ -1,6 +1,6 @@
 mkdir bin/packages -p
 
-pushd .
+pushd . > /dev/null
 packages=$(readlink bin/packages -f)
 
 cd src/Nvipt.Core
