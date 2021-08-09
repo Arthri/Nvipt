@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Nvipt.OTAPI</id>
+    <version>0.0.1</version>
+    <authors>Nvipt.OTAPI</authors>
+    <license type="expression">MIT-0</license>
+    <licenseUrl>https://licenses.nuget.org/MIT-0</licenseUrl>
+    <projectUrl>https://github.com/Arthri/Nvipt/tree/master/src/Nvipt.OTAPI</projectUrl>
+    <description>Provides helper methods for Nvipt on OTAPI</description>
+    <copyright>Copyright © Arthri 2021</copyright>
+    <tags>terraria</tags>
+    <repository type="git" url="https://github.com/Arthri/Nvipt" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>
