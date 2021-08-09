@@ -11,9 +11,9 @@
     <RepositoryUrl>https://github.com/Arthri/Nvipt</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>terraria</PackageTags>
-    <AssemblyVersion>0.0.1.0</AssemblyVersion>
-    <FileVersion>0.0.1.0</FileVersion>
-    <Version>0.0.1</Version>
+    <AssemblyVersion>0.0.2.0</AssemblyVersion>
+    <FileVersion>0.0.2.0</FileVersion>
+    <Version>0.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Arthri</Authors>
   </PropertyGroup>
