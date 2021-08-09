@@ -4,21 +4,30 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nvipt.Core", "src\Nvipt.Core\Nvipt.Core.csproj", "{A2432430-FE91-4AFA-B75C-3D181B538070}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Nvipt.OTAPI", "src\Nvipt.OTAPI\Nvipt.OTAPI.shproj", "{D04E4B55-E049-4427-8981-9757D22B8210}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nvipt.OTAPI", "src\Nvipt.OTAPI\Nvipt.OTAPI.csproj", "{3E344638-7436-4BC4-9298-613119FF98FD}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Nvipt.OTAPI\Nvipt.OTAPI.projitems*{d04e4b55-e049-4427-8981-9757d22b8210}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CoreDebug|Any CPU = CoreDebug|Any CPU
 		CoreRelease|Any CPU = CoreRelease|Any CPU
+		OTAPIDebug|Any CPU = OTAPIDebug|Any CPU
+		OTAPIRelease|Any CPU = OTAPIRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A2432430-FE91-4AFA-B75C-3D181B538070}.CoreDebug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2432430-FE91-4AFA-B75C-3D181B538070}.CoreDebug|Any CPU.Build.0 = Debug|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.CoreDebug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2432430-FE91-4AFA-B75C-3D181B538070}.CoreRelease|Any CPU.ActiveCfg = Release|Any CPU
 		{A2432430-FE91-4AFA-B75C-3D181B538070}.CoreRelease|Any CPU.Build.0 = Release|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.CoreRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{A2432430-FE91-4AFA-B75C-3D181B538070}.OTAPIDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2432430-FE91-4AFA-B75C-3D181B538070}.OTAPIDebug|Any CPU.Build.0 = Debug|Any CPU
+		{A2432430-FE91-4AFA-B75C-3D181B538070}.OTAPIRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{A2432430-FE91-4AFA-B75C-3D181B538070}.OTAPIRelease|Any CPU.Build.0 = Release|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.OTAPIDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.OTAPIDebug|Any CPU.Build.0 = Debug|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.OTAPIRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{3E344638-7436-4BC4-9298-613119FF98FD}.OTAPIRelease|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
