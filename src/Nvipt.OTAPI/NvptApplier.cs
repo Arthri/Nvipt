@@ -18,7 +18,10 @@ namespace Nvipt.OTAPI
 
         /// <inheritdoc cref="INvptApplier.Apply(Inventory, Player)"/>
         /// <param name="toggleSSC">If true, then SSC will be turned on if it isn't already. SSC will be turned off after the operation.</param>
+        // It's inherited
+#pragma warning disable CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
         public void Apply(Inventory inventory, Player player, bool toggleSSC = true)
+#pragma warning restore CS1573 // Parameter has no matching param tag in the XML comment (but other parameters do)
         {
             var wasSSCEnabled = Main.ServerSideCharacter;
 

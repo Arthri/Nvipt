@@ -2,6 +2,9 @@
 
 namespace Nvipt.Core
 {
+    /// <summary>
+    /// Represents a player's aesthetics.
+    /// </summary>
     public class PlayerStyle
     {
         /// <summary>

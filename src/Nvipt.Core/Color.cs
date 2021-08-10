@@ -25,11 +25,16 @@ namespace Nvipt.Core
         public byte B => (byte)(_packedValue >> 16);
 
         /// <summary>
-        /// Represents the value of this color in ABGR format
+        /// Represents the value of this color in ABGR format.
         /// </summary>
-        /// <remarks>A will always be 255</remarks>
+        /// <remarks>A will always be 255.</remarks>
         public int PackedValue => _packedValue;
 
+        /// <summary>
+        /// Initializes a new color with the given packed value.
+        /// </summary>
+        /// <param name="packedValue">The decimal representation of the color in ABGR format.</param>
+        /// <remarks>A field should always be set to 255 or 0xFF.</remarks>
         public Color(int packedValue)
         {
             if ((packedValue & 0xFF) != 255)
@@ -40,6 +45,12 @@ namespace Nvipt.Core
             _packedValue = packedValue;
         }
 
+        /// <summary>
+        /// Initializes a new color with the given <paramref name="r"/>, <paramref name="g"/>, and <paramref name="b"/> fields.
+        /// </summary>
+        /// <param name="r"><inheritdoc cref="R" path="/summary"/></param>
+        /// <param name="g"><inheritdoc cref="G" path="/summary"/></param>
+        /// <param name="b"><inheritdoc cref="B" path="/summary"/></param>
         public Color(byte r, byte g, byte b)
         {
             _packedValue = (b << 16) & (g << 8) * r;

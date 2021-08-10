@@ -5,7 +5,7 @@ using Terraria;
 namespace Nvipt.OTAPI
 {
     /// <summary>
-    /// Default implementation of <see cref="NvptExtractor"/>
+    /// Default implementation of <see cref="INvptExtractor"/>.
     /// </summary>
     public class NvptExtractor : INvptExtractor
     {

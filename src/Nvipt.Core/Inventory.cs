@@ -289,6 +289,9 @@ namespace Nvipt.Core
             }
         }
 
+        /// <summary>
+        /// Initializes an inventory with empty items.
+        /// </summary>
         public Inventory()
         {
             _backpack = new BasicItem[BackpackSize];
@@ -302,6 +305,18 @@ namespace Nvipt.Core
             _voidVault = new BasicItem[VoidVaultSize];
         }
 
+        /// <summary>
+        /// Initializes an inventory with the specified items.
+        /// </summary>
+        /// <param name="backpack"><inheritdoc cref="Backpack" path="/summary"/></param>
+        /// <param name="equipment"><inheritdoc cref="Equipment" path="/summary"/></param>
+        /// <param name="dyes"><inheritdoc cref="Dyes" path="/summary"/></param>
+        /// <param name="miscEquips"><inheritdoc cref="MiscEquips" path="/summary"/></param>
+        /// <param name="miscDyes"><inheritdoc cref="MiscDyes" path="/summary"/></param>
+        /// <param name="piggyBank"><inheritdoc cref="PiggyBank" path="/summary"/></param>
+        /// <param name="safe"><inheritdoc cref="Safe" path="/summary"/></param>
+        /// <param name="defendersForge"><inheritdoc cref="DefendersForge" path="/summary"/></param>
+        /// <param name="voidVault"><inheritdoc cref="VoidVault" path="/summary"/></param>
         public Inventory(
             BasicItem[] backpack,
             BasicItem[] equipment,
