@@ -7,7 +7,8 @@ pushd . > /dev/null
 packages=$(readlink bin/packages -f)
 
 cd src/Nvipt.Core
-dotnet pack -o $packages -c $config
+dotnet build -c $config
+dotnet pack -o $packages -c $config --no-build
 
 popd > /dev/null
 
