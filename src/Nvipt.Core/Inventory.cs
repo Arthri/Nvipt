@@ -8,7 +8,7 @@ namespace Nvipt.Core
     public class Inventory
     {
         /// <summary>
-        /// Represents the size of <see cref="Backpack"/>.
+        /// Represents <see cref="Backpack"/>'s size.
         /// </summary>
         public static readonly int BackpackSize = 59;
 
@@ -23,47 +23,47 @@ namespace Nvipt.Core
         public static readonly int AccessorySize = 7;
 
         /// <summary>
-        /// Represents the size of <see cref="Equipment"/>.
+        /// Represents <see cref="Equipment"/>'s size.
         /// </summary>
         public static readonly int EquipmentSize = ArmorSize + AccessorySize + 10;
 
         /// <summary>
-        /// Represents the size of <see cref="Dyes"/>.
+        /// Represents <see cref="Dyes"/>'s size.
         /// </summary>
         public static readonly int DyesSize = 10;
 
         /// <summary>
-        /// Represents the size of <see cref="MiscEquips"/>.
+        /// Represents <see cref="MiscEquips"/>'s size.
         /// </summary>
         public static readonly int MiscEquipsSize = 5;
 
         /// <summary>
-        /// Represents the size of <see cref="MiscDyes"/>.
+        /// Represents <see cref="MiscDyes"/>'s size.
         /// </summary>
         public static readonly int MiscDyesSize = 5;
 
         /// <summary>
-        /// Represents the size of <see cref="PiggyBank"/>.
+        /// Represents <see cref="PiggyBank"/>'s size.
         /// </summary>
         public static readonly int PiggyBankSize = 40;
 
         /// <summary>
-        /// Represents the size of <see cref="Safe"/>.
+        /// Represents <see cref="Safe"/>'s size.
         /// </summary>
         public static readonly int SafeSize = 40;
 
         /// <summary>
-        /// Represents the size of <see cref="DefendersForge"/>.
+        /// Represents <see cref="DefendersForge"/>'s size.
         /// </summary>
         public static readonly int DefendersForgeSize = 40;
 
         /// <summary>
-        /// Represents the size of <see cref="VoidVault"/>.
+        /// Represents <see cref="VoidVault"/>'s size.
         /// </summary>
         public static readonly int VoidVaultSize = 40;
 
         /// <summary>
-        /// Represents the total size of an inventory.
+        /// Represents an inventory's total size.
         /// </summary>
         public static readonly int InventorySize = 
             BackpackSize

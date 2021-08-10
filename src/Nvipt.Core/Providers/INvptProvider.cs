@@ -20,7 +20,7 @@ namespace Nvipt.Core.Providers
         /// <summary>
         /// Gets an Nvpt from the provider.
         /// </summary>
-        /// <param name="owner">The owner of the Nvpt.</param>
+        /// <param name="owner">The owner of the Nvpt to get.</param>
         /// <param name="name">The name of the Nvpt to get.</param>
         /// <returns>An Nvpt owned by <paramref name="owner"/> with the name <paramref name="name"/>.</returns>
         Nvpt Get(int owner, string name);
@@ -28,17 +28,17 @@ namespace Nvipt.Core.Providers
         /// <summary>
         /// Renames an Nvpt in the provider.
         /// </summary>
-        /// <param name="owner">The owner of the Nvpt.</param>
-        /// <param name="oldName">The old name of the Nvpt.</param>
-        /// <param name="newName">The new name for the Nvpt.</param>
+        /// <param name="owner">The owner of the Nvpt to rename.</param>
+        /// <param name="oldName">The old name of the Nvpt to rename.</param>
+        /// <param name="newName">The new name for the Nvpt to rename.</param>
         /// <returns><see langword="true"/> if the operation succeeded, otherwise <see langword="false"/>.</returns>
         bool Rename(int owner, string oldName, string newName);
 
         /// <summary>
         /// Updates the inventory of an Nvpt in the provider.
         /// </summary>
-        /// <param name="owner">The owner of the Nvpt.</param>
-        /// <param name="name">The name of the Nvpt.</param>
+        /// <param name="owner">The owner of the Nvpt to update.</param>
+        /// <param name="name">The name of the Nvpt to update.</param>
         /// <param name="inventory">The new inventory for the Nvpt.</param>
         /// <returns><see langword="true"/> if the operation succeeded, otherwise <see langword="false"/>.</returns>
         bool Update(int owner, string name, Inventory inventory);
@@ -46,8 +46,8 @@ namespace Nvipt.Core.Providers
         /// <summary>
         /// Deletes an inventory from the provider.
         /// </summary>
-        /// <param name="owner">The owner of the Nvpt.</param>
-        /// <param name="name">The name of the Nvpt.</param>
+        /// <param name="owner">The owner of the Nvpt to delete.</param>
+        /// <param name="name">The name of the Nvpt to delete.</param>
         /// <returns><see langword="true"/> if the operation succeeded, otherwise <see langword="false"/>.</returns>
         bool Delete(int owner, string name);
     }

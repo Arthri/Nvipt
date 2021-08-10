@@ -10,22 +10,22 @@ namespace Nvipt.Core
         private readonly int _packedValue;
 
         /// <summary>
-        /// Represents the redness of this color.
+        /// Represents this color's redness.
         /// </summary>
         public byte R => (byte)_packedValue;
 
         /// <summary>
-        /// Represents the greenness of this color.
+        /// Represents this color's greenness.
         /// </summary>
         public byte G => (byte)(_packedValue >> 8);
 
         /// <summary>
-        /// Represents the blueness of this color.
+        /// Represents this color's blueness.
         /// </summary>
         public byte B => (byte)(_packedValue >> 16);
 
         /// <summary>
-        /// Represents the value of this color in ABGR format.
+        /// Represents this color's decimal value in ABGR format.
         /// </summary>
         /// <remarks>A will always be 255.</remarks>
         public int PackedValue => _packedValue;
@@ -33,7 +33,7 @@ namespace Nvipt.Core
         /// <summary>
         /// Initializes a new color with the given packed value.
         /// </summary>
-        /// <param name="packedValue">The decimal representation of the color in ABGR format.</param>
+        /// <param name="packedValue">The color's decimal value in ABGR format.</param>
         /// <remarks>A field should always be set to 255 or 0xFF.</remarks>
         public Color(int packedValue)
         {

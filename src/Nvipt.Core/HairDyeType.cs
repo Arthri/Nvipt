@@ -71,7 +71,7 @@
         TwilightDye = 12,
 
         /// <summary>
-        /// Represents amnount of dyes.
+        /// Represents amount of dyes.
         /// </summary>
         Count = TwilightDye
     }

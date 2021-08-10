@@ -30,7 +30,7 @@ namespace Nvipt.OTAPI.Extensions
         }
 
         /// <summary>
-        /// Creates a basic item based of the current item.
+        /// Creates a basic item based off the current item.
         /// </summary>
         /// <param name="item">The current item.</param>
         /// <returns>A basic item based off the current item.</returns>
