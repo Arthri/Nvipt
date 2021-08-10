@@ -25,7 +25,7 @@ namespace Nvipt.Core
             {
                 if (value >= ClothesCount)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, nameof(ClothesType) + " is out of bounds.");
+                    throw new ArgumentOutOfRangeException(nameof(value), value, "Value is out of bounds.");
                 }
 
                 _clothesType = value;
@@ -50,7 +50,7 @@ namespace Nvipt.Core
             {
                 if (value >= HairCount)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, nameof(HairType) + " is out of bounds.");
+                    throw new ArgumentOutOfRangeException(nameof(value), value, "Value is out of bounds.");
                 }
 
                 _hairType = value;
@@ -70,7 +70,7 @@ namespace Nvipt.Core
             {
                 if (value < HairDyeType.None && value >= HairDyeType.Count)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(value), value, nameof(HairDye) + " is out of bounds.");
+                    throw new ArgumentOutOfRangeException(nameof(value), value, "Value is out of bounds.");
                 }
 
                 _hairDye = value;
