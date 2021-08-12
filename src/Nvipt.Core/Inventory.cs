@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Nvipt.Core
 {
     /// <summary>
     /// Represents a player's inventory.
     /// </summary>
-    public class Inventory
+    public class Inventory : IEnumerable<BasicItem>
     {
         /// <summary>
         /// Represents <see cref="Backpack"/>'s size.
@@ -382,6 +385,66 @@ namespace Nvipt.Core
             _safe = safe;
             _defendersForge = defendersForge;
             _voidVault = voidVault;
+        }
+
+        /// <summary>
+        /// Returns an enumerator that iterates through the inventory.
+        /// </summary>
+        /// <returns>An enumerator that iterates through the inventory.</returns>
+        public IEnumerator<BasicItem> GetEnumerator()
+        {
+            foreach (var item in Backpack)
+            {
+                yield return item;
+            }
+
+            foreach (var item in Equipment)
+            {
+                yield return item;
+            }
+
+            foreach (var item in Dyes)
+            {
+                yield return item;
+            }
+
+            foreach (var item in MiscEquips)
+            {
+                yield return item;
+            }
+
+            foreach (var item in MiscDyes)
+            {
+                yield return item;
+            }
+
+            foreach (var item in PiggyBank)
+            {
+                yield return item;
+            }
+
+            foreach (var item in Safe)
+            {
+                yield return item;
+            }
+
+            yield return TrashItem;
+
+            foreach (var item in DefendersForge)
+            {
+                yield return item;
+            }
+
+            foreach (var item in VoidVault)
+            {
+                yield return item;
+            }
+        }
+
+        /// <inheritdoc cref="GetEnumerator"/>
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
